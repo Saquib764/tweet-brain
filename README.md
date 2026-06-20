@@ -4,6 +4,13 @@ A personal, local-first dashboard for tracking X (Twitter) account groups, colle
 
 All groups and data live in the [`database/`](database/) folder as YAML files — no external database required.
 
+**Requirements:** You need [X API access](https://developer.x.com/) to read tweets and an [xAI API key](https://console.x.ai/) to request Grok LLM models.
+
+<p align="center">
+  <img src="resources/dashboard.png" alt="Tweet Brain dashboard" width="49%" />
+  <img src="resources/flow.png" alt="Tweet Brain workflow" width="49%" />
+</p>
+
 ## Features
 
 - **Account groups** — Organize tracked users by category (e.g. AI news, startups)
