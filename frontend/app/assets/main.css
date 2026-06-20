@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@variant dark (false);
+
+:root {
+  --tf-primary: #ec4899;
+  --tf-primary-muted: rgba(236, 72, 153, 0.15);
+
+  --fs-bg-canvas: #030712;
+  --fs-bg-panel: #111827;
+  --fs-bg-elevated: #1f2937;
+  --fs-border: #1f2937;
+  --fs-border-subtle: #374151;
+
+  --tf-bg-page: var(--fs-bg-canvas);
+  --tf-bg-surface: var(--fs-bg-panel);
+  --tf-bg-muted: var(--fs-bg-elevated);
+  --tf-border: var(--fs-border);
+  --tf-text: #e5e7eb;
+  --tf-text-muted: #9ca3af;
+  --tf-text-dimmed: #6b7280;
+  --tf-header-height: 64px;
+
+  --ui-radius: 0.5rem;
+  --ui-header-height: var(--tf-header-height);
+  --ui-container: 72rem;
+}
+
+:root,
+.dark {
+  --ui-primary: var(--ui-color-primary-500);
+  --ui-secondary: var(--ui-color-secondary-500);
+  --ui-success: var(--ui-color-success-500);
+  --ui-info: var(--ui-color-info-500);
+  --ui-warning: var(--ui-color-warning-500);
+  --ui-error: var(--ui-color-error-500);
+
+  --ui-text-dimmed: #6b7280;
+  --ui-text-muted: #9ca3af;
+  --ui-text-toned: #d1d5db;
+  --ui-text: #e5e7eb;
+  --ui-text-highlighted: #ffffff;
+  --ui-text-inverted: #ffffff;
+
+  --ui-bg: var(--fs-bg-panel);
+  --ui-bg-muted: var(--fs-bg-elevated);
+  --ui-bg-elevated: #374151;
+  --ui-bg-accented: #4b5563;
+  --ui-bg-inverted: var(--fs-bg-canvas);
+
+  --ui-border: var(--fs-border);
+  --ui-border-muted: var(--fs-border);
+  --ui-border-accented: var(--fs-border-subtle);
+  --ui-border-inverted: #6b7280;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  body {
+    color-scheme: dark;
+    background-color: var(--tf-bg-page);
+    color: var(--ui-text);
+  }
+
+  ::selection {
+    background-color: rgba(236, 72, 153, 0.35);
+    color: #fff;
+  }
+}

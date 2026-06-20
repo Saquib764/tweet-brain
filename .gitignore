@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Backend secrets
+backend/.env
+
+# Runtime YAML caches (seed groups.yaml is tracked)
+database/*
+!database/info.md
+
+# Node
+node_modules/
+.nuxt/
+.output/
+dist/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+**/*.lock

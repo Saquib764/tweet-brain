@@ -1,0 +1,13 @@
+---
+alwaysApply: true
+---
+
+# Tweet Brain
+
+Personal local-first X (Twitter) dashboard. All data in `database/` as YAML.
+
+- **X API**: Python `xdk` SDK — credentials in `backend/.env` only
+- **LLM**: Grok via xAI (`api.x.ai/v1`) — never commit `XAI_API_KEY`
+- **Stack**: FastAPI backend (port 8001), Nuxt 4 + Nuxt UI frontend (port 80)
+- **Docs**: README.md (public), MASTER.md (internal spec)
+- **Scope**: Minimize diffs; match existing patterns; no secrets in git

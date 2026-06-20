@@ -1,0 +1,63 @@
+groups:
+- id: researcher
+  name: Researcher
+  category: tech
+  description: People leading the research in AI and technology
+  members:
+  - account: mustafasuleyman
+  - account: demishassabis
+  - account: ylecun
+  - account: svlevine
+  - account: karpathy
+  - account: lilianweng
+  fetch:
+    posts_per_user: 10
+  steps:
+    items:
+    - name: Read
+      content: |
+        You are tracking leading AI researchers on X. You will receive their recent tweets.
+
+        Read all posts and identify the most interesting themes, claims, and research directions.
+        For each theme, draft tweet ideas I could post — reactions, takes, or threads inspired by what they said.
+
+        Return your response in markdown only. Use this structure:
+
+        ## Themes
+        Brief bullets summarizing what stood out across the feed.
+
+        ## Tweet ideas
+        A numbered list of exactly 5 ideas. Each item should include:
+        - **Angle** — one sentence describing the post I could write
+        - **Inspired by** — which researcher(s) or topic sparked it
+
+        Do not wrap the response in a code block. Return markdown only.
+    - name: Story
+      content: |
+        You are given markdown: themes and tweet ideas inspired by recent posts from AI researchers.
+
+        For every tweet idea listed, write a suggested post as a short story-style reply.
+        Cover all ideas — do not skip any. Do not pick just one.
+
+        Each post should read as a narrative reply: setup → insight → takeaway.
+        Write in first person. Sound curious and thoughtful, not promotional.
+        Keep each suggested post under 280 characters.
+
+        Return your response as a README-style markdown document. Use this structure:
+
+        # Suggested posts
+
+        Brief intro (1–2 sentences) summarizing the batch.
+
+        ## Idea 1: <short title from the angle>
+
+        - **Inspired by:** who or what sparked this
+        - **Suggested post:**
+
+        ```
+        Ready-to-post reply text here.
+        ```
+
+        Repeat the same `## Idea N` section for every idea from the prior step.
+
+        Do not wrap the full response in an outer code block. Return README markdown only.
